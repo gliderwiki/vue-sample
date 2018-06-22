@@ -20,3 +20,12 @@ npm install --save express body-parser cors morgan
 
 
 npm start
+
+
+
+npm install --save sequelize sqlite3@3.1.8
+
+
+npm install --save joi
+
+npm install --save vuetify
