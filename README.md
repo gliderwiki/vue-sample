@@ -29,3 +29,13 @@ npm install --save sequelize sqlite3@3.1.8
 npm install --save joi
 
 npm install --save vuetify
+
+npm install --save jsonwebtoken
+
+npm install --save bcrypt-nodejs
+
+npm install --save bluebird
+
+npm install --save vuex
+
+npm install --save vuex-router-sync
