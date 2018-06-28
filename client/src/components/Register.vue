@@ -1,38 +1,35 @@
 <template>
-  <v-container grid-list-xl text-xs-center>
-    <v-layout row wrap>
-      <v-flex xs10 offset-xs1>
+  <v-layout row wrap>
+    <v-flex xs6 offset-xs3>
 
-        <div class="white elevation-2">
-          <v-toolbar flat dense class="cyan" dark>
-            <v-toolbar-title>Register</v-toolbar-title>
+      <panel title="Register">
+        <form name="tab-tracker-form" autocomplete="off">
+          <v-text-field
+            id="email"
+            v-model="email"
+            label="email"
+          ></v-text-field>
 
-          </v-toolbar>
-          <div class="pl-4 pr-4 pt-2 pb-2">
-            <v-text-field
-              id="email"
-              v-model="email"
-              label="email"
-            ></v-text-field>
+          <v-text-field
+            id="password"
+            type="password"
+            v-model="password"
+            label="password"
+          ></v-text-field>
+        </form>
 
-            <v-text-field
-              id="password"
-              type="password"
-              v-model="password"
-              label="password"
-            ></v-text-field>
-
-              <div class="err" v-html="error"></div><br>
-              <v-btn class="cyan" @click="register">Register</v-btn>
-          </div>
-        </div>
-      </v-flex>
-    </v-layout>
-  </v-container>
+        <br>
+        <div class="err" v-html="error"></div>
+        <br>
+        <v-btn class="cyan" @click="register">Register</v-btn>
+      </panel>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
+import Panel from '@/components/Panel'
 export default {
   data () {
     return {
@@ -55,6 +52,9 @@ export default {
         this.error = error.response.data.error
       }
     }
+  },
+  components : {
+    Panel
   }
   // mounted() {
   //   setTimeout(() => {

@@ -3,7 +3,7 @@
     <v-app>
       <page-header />
       <v-content>
-        <v-container fluid>
+        <v-container grid-list-xl text-xs-center>
           <router-view></router-view>
         </v-container>
       </v-content>
@@ -33,5 +33,8 @@ export default {
 }
 .input-group--text-field input {
   border-bottom: 1px solid black;
+}
+.danger-alert{
+  color: red;
 }
 </style>
